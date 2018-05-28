@@ -1,0 +1,38 @@
+
+{
+	"buildFiles" : [ "/Users/cuco/Desktop/ToolsProject/app/CMakeLists.txt" ],
+	"cleanCommands" : 
+	[
+		"/Users/cuco/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/cuco/Desktop/ToolsProject/app/.externalNativeBuild/cmake/release/arm64-v8a --target clean"
+	],
+	"cppFileExtensions" : [ "cpp" ],
+	"libraries" : 
+	{
+		"native-lib-Release-arm64-v8a" : 
+		{
+			"abi" : "arm64-v8a",
+			"artifactName" : "native-lib",
+			"buildCommand" : "/Users/cuco/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/cuco/Desktop/ToolsProject/app/.externalNativeBuild/cmake/release/arm64-v8a --target native-lib",
+			"buildType" : "release",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android --gcc-toolchain=/Users/cuco/Library/Android/sdk/ndk-bundle/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/cuco/Library/Android/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -isystem /Users/cuco/Library/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include -isystem /Users/cuco/Library/Android/sdk/ndk-bundle/sources/android/support/include -isystem /Users/cuco/Library/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++abi/include  -isystem /Users/cuco/Library/Android/sdk/ndk-bundle/sysroot/usr/include/aarch64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -frtti -fexceptions -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "/Users/cuco/Desktop/ToolsProject/app/src/main/cpp/native-lib.cpp",
+					"workingDirectory" : "/Users/cuco/Desktop/ToolsProject/app/.externalNativeBuild/cmake/release/arm64-v8a"
+				}
+			],
+			"output" : "/Users/cuco/Desktop/ToolsProject/app/build/intermediates/cmake/release/obj/arm64-v8a/libnative-lib.so",
+			"toolchain" : "5763246223924274846"
+		}
+	},
+	"toolchains" : 
+	{
+		"5763246223924274846" : 
+		{
+			"cCompilerExecutable" : "/Users/cuco/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/Users/cuco/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+		}
+	}
+}
