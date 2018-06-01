@@ -3,8 +3,6 @@ package com.aige.cuco.toolproject.utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.ry.ranyeslive.bean.HomePageBean;
-import com.ry.ranyeslive.constants.ConstantLoginKey;
 
 /**
  * Created by wusourece on 2017/6/30.

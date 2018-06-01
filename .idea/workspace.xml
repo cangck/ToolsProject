@@ -5,53 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8f0e344-20a9-4a2a-baaf-6eb545267856" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/ToolsProject.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/VoiceEnterActivity.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/network/IPUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/BitmapCompressUtils.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/BitmapUtils.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/CheckNetConnectionUtils.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/ClientThread.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/CommonUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/DateUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/FileCache.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/FileUtils.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/HTMlUtils.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/IPUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/ImageCompressUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/ImageUtils.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/ImmersedStatusbarUtils.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/JoinJudgmentIsPsdUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/LoginSharedPreferencesUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/MD5.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/OkHttpUtils.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/PageJump.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/PicSizeUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/ScreenUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/SnackbarType.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/SnackbarUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/ToastUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/UploadHttpMultiFile.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/UploadUtils.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/Util.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/Utils.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/ValidationUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/WeChatShareUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/XRScreenUtils.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/zoomphoto/ImagPagerUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/zoomphoto/LazyViewPager.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/zoomphoto/ZoomImageView.java" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change beforePath="$PROJECT_DIR$/.idea/ToolsProject.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_android_27.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/ImageUtils.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/ImageUtils.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/JoinJudgmentIsPsdUtil.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/LoginSharedPreferencesUtil.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/LoginSharedPreferencesUtil.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/OkHttpUtils.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/OkHttpUtils.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/PageJump.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/UploadHttpMultiFile.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/UploadHttpMultiFile.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/Utils.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/Utils.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/zoomphoto/ImagPagerUtil.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/zoomphoto/ImagPagerUtil.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -74,24 +43,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="IPUtil.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/network/IPUtil.java">
+      <file leaf-file-name="ImagPagerUtil.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/zoomphoto/ImagPagerUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="29" column="72" lean-forward="false" selection-start-line="29" selection-start-column="72" selection-end-line="29" selection-end-column="72" />
+            <state relative-caret-position="318">
+              <caret line="65" column="27" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <marker date="1527832135000" expanded="true" signature="562:606" ph="/**...*/" />
+                <marker date="1527832135000" expanded="true" signature="1106:1206" ph="{...}" />
+                <marker date="1527832135000" expanded="true" signature="1273:1480" ph="{...}" />
+                <marker date="1527832135000" expanded="true" signature="1490:1542" ph="/**...*/" />
+                <marker date="1527832135000" expanded="true" signature="1588:1689" ph="{...}" />
+                <marker date="1527832135000" expanded="false" signature="1717:1730" ph=" { " />
+                <marker date="1527832135000" expanded="false" signature="1744:1752" ph=" }" />
+                <marker date="1527832135000" expanded="true" signature="1782:3402" ph="{...}" />
+                <marker date="1527832135000" expanded="false" signature="3072:3214" ph="(v) → { " />
+                <marker date="1527832135000" expanded="false" signature="3231:3259" ph=" }" />
+                <marker date="1527832135000" expanded="true" signature="3466:3885" ph="{...}" />
+                <marker date="1527832135000" expanded="false" signature="3513:3642" ph="(SimpleOnPageChangeListener) onPageSelected(position) → {" />
+                <marker date="1527832135000" expanded="false" signature="3722:3739" ph="}" />
+                <marker date="1527832135000" expanded="true" signature="3941:4930" ph="{...}" />
+                <marker date="1527832135000" expanded="false" signature="4047:4064" ph=" { " />
+                <marker date="1527832135000" expanded="false" signature="4083:4095" ph=" }" />
+                <marker date="1527832135000" expanded="true" signature="4194:4398" ph="{...}" />
+                <marker date="1527832135000" expanded="true" signature="4506:4576" ph="{...}" />
+                <marker date="1527832135000" expanded="true" signature="4632:4780" ph="{...}" />
+                <marker date="1527832135000" expanded="false" signature="4871:4888" ph=" { " />
+                <marker date="1527832135000" expanded="false" signature="4910:4922" ph=" }" />
+                <marker date="1527832135000" expanded="true" signature="4994:5212" ph="{...}" />
+                <marker date="1527832135000" expanded="false" signature="5222:5252" ph="/unchecked/" />
+                <marker date="1527832135000" expanded="true" signature="5327:5581" ph="{...}" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/FileUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -2161,6 +2144,13 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/FileUtils.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/VoiceEnterActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/network/IPUtil.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/ImageUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/LoginSharedPreferencesUtil.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/OkHttpUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/PageJump.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/UploadHttpMultiFile.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/Utils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/zoomphoto/ImagPagerUtil.java" />
       </list>
     </option>
   </component>
@@ -2226,15 +2216,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ToolsProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ToolsProject" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="toolproject" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -2443,13 +2424,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.73072624" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17206705" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28715083" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2492971" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37019682" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28726554" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26148078" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28715083" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -2521,7 +2502,17 @@
         <state relative-caret-position="282">
           <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/network/IPUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="29" column="72" lean-forward="false" selection-start-line="29" selection-start-column="72" selection-end-line="29" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2534,12 +2525,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/network/IPUtil.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/ImageUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="29" column="72" lean-forward="false" selection-start-line="29" selection-start-column="72" selection-end-line="29" selection-end-column="72" />
+        <state relative-caret-position="265">
+          <caret line="108" column="30" lean-forward="true" selection-start-line="108" selection-start-column="30" selection-end-line="108" selection-end-column="30" />
+          <folding>
+            <marker date="1527832030000" expanded="false" signature="6001:6009" ph="&lt;~&gt;" />
+            <marker date="1527832030000" expanded="false" signature="7642:7650" ph="&lt;~&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/JoinJudgmentIsPsdUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/LoginSharedPreferencesUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/OkHttpUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="26" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="294" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/PageJump.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/UploadHttpMultiFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="16" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="78" column="17" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="525" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/aige/cuco/toolproject/utils/zoomphoto/ImagPagerUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="65" column="27" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1527832135000" expanded="true" signature="562:606" ph="/**...*/" />
+            <marker date="1527832135000" expanded="true" signature="1106:1206" ph="{...}" />
+            <marker date="1527832135000" expanded="true" signature="1273:1480" ph="{...}" />
+            <marker date="1527832135000" expanded="true" signature="1490:1542" ph="/**...*/" />
+            <marker date="1527832135000" expanded="true" signature="1588:1689" ph="{...}" />
+            <marker date="1527832135000" expanded="false" signature="1717:1730" ph=" { " />
+            <marker date="1527832135000" expanded="false" signature="1744:1752" ph=" }" />
+            <marker date="1527832135000" expanded="true" signature="1782:3402" ph="{...}" />
+            <marker date="1527832135000" expanded="false" signature="3072:3214" ph="(v) → { " />
+            <marker date="1527832135000" expanded="false" signature="3231:3259" ph=" }" />
+            <marker date="1527832135000" expanded="true" signature="3466:3885" ph="{...}" />
+            <marker date="1527832135000" expanded="false" signature="3513:3642" ph="(SimpleOnPageChangeListener) onPageSelected(position) → {" />
+            <marker date="1527832135000" expanded="false" signature="3722:3739" ph="}" />
+            <marker date="1527832135000" expanded="true" signature="3941:4930" ph="{...}" />
+            <marker date="1527832135000" expanded="false" signature="4047:4064" ph=" { " />
+            <marker date="1527832135000" expanded="false" signature="4083:4095" ph=" }" />
+            <marker date="1527832135000" expanded="true" signature="4194:4398" ph="{...}" />
+            <marker date="1527832135000" expanded="true" signature="4506:4576" ph="{...}" />
+            <marker date="1527832135000" expanded="true" signature="4632:4780" ph="{...}" />
+            <marker date="1527832135000" expanded="false" signature="4871:4888" ph=" { " />
+            <marker date="1527832135000" expanded="false" signature="4910:4922" ph=" }" />
+            <marker date="1527832135000" expanded="true" signature="4994:5212" ph="{...}" />
+            <marker date="1527832135000" expanded="false" signature="5222:5252" ph="/unchecked/" />
+            <marker date="1527832135000" expanded="true" signature="5327:5581" ph="{...}" />
           </folding>
         </state>
       </provider>
