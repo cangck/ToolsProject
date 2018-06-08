@@ -25,8 +25,7 @@ public class IPUtil {
             }
             HttpURLConnection httpConnection = (HttpURLConnection) connection;
             int responseCode = httpConnection.getResponseCode();
-            if (responseCode == HttpURLConnection.HTTP_OK) {
-                inStream = httpConnection.getInputStream();
+            if (responseCode == HttpURLConnection.HTTP_OK) { inStream = httpConnection.getInputStream();
                 BufferedReader reader = new BufferedReader(new InputStreamReader(inStream, "gb2312"));
                 StringBuilder builder = new StringBuilder();
                 String line = null;
@@ -34,6 +33,7 @@ public class IPUtil {
                     builder.append(line);
                     //builder.append(line).append("\n");
                 }
+
                 inStream.close();
                 int start = builder.indexOf("[");
                 int end = builder.indexOf("]");

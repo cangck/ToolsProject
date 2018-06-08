@@ -138,7 +138,6 @@ int main()
                 fwrite(pFrameYUV->data[0], 1, y_size, fp_yuv);
                 fwrite(pFrameYUV->data[1], 1, y_size / 4, fp_yuv);
                 fwrite(pFrameYUV->data[2], 1, y_size / 4, fp_yuv);
-
                 frame_count++;
                 printf("解码第%d帧\n",frame_count);
             }
