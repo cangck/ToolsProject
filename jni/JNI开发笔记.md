@@ -33,11 +33,11 @@ c/c++在队上或栈上申请内存？
     方式2:指定动态库的绝对路径名，需要加上前缀和后缀
     处理找不到的问题:
         方式1:将动态链接库拷贝到java.library.path目录下
-        方式2:给jvm添加“-Djava.library.path=动态链接库搜索目录”参数，指定系统属性java.library.path的 值
+        方式2:给jvm添加“-Djava.library.path=动态链接库搜索目录”参数，指定系统属性java.library.path的值
         java -Djava.library.path=/Users/yangxin/Desktop
 
 
-1、JNI开发流程(不同操作系统环境下编译的动态库)(用一个HelloWorld示例拉开JNI开发的序幕) 
+1、JNI开发流程(不同操作系统环境下编译的动态库)(用一个HelloWorld示例拉开JNI开发的序幕)
 2、JVM查找java native方法的规则
 3、JNI数据类型及与Java数据类型的映射关系
 4、JNI字符串处理
