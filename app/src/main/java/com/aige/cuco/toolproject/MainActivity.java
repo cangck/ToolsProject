@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.aige.cuco.toolproject.jnicallback.AccessMethod;
+import com.aige.cuco.toolproject.jnicallback.ClassMethod;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
@@ -56,8 +57,16 @@ public class MainActivity extends AppCompatActivity {
 //                        Log.i(TAG, "number : " + ints[i][j] + "\n");
 //                    }
 //                }
-                AccessMethod.callJavaStaticMethod();
-                AccessMethod.callJavaInstaceMethod();
+//                AccessMethod.callJavaStaticMethod();
+//                AccessMethod.callJavaInstaceMethod();
+                ClassMethod classMethod = new ClassMethod();
+                classMethod.setNum(10);
+                classMethod.setStr("Hellow");
+                AccessMethod.accessStaticField();
+                AccessMethod.accessInstanceField(classMethod);
+                Log.i(TAG, "ClassMethod: str =  " + classMethod.getStr());
+                Log.i(TAG, "ClassMethod: num = " + classMethod.getNum());
+                AccessMethod.callSupperInstanceMethod();
             }
         });
     }

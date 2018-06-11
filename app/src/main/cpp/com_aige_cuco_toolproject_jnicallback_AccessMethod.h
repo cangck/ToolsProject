@@ -23,6 +23,38 @@ JNIEXPORT void JNICALL Java_com_aige_cuco_toolproject_jnicallback_AccessMethod_c
 JNIEXPORT void JNICALL Java_com_aige_cuco_toolproject_jnicallback_AccessMethod_callJavaInstaceMethod
   (JNIEnv *, jclass);
 
+/*
+ * Class:     com_aige_cuco_toolproject_jnicallback_AccessMethod
+ * Method:    accessInstanceField
+ * Signature: (Lcom/aige/cuco/toolproject/jnicallback/ClassMethod;)V
+ */
+JNIEXPORT void JNICALL Java_com_aige_cuco_toolproject_jnicallback_AccessMethod_accessInstanceField
+  (JNIEnv *, jclass, jobject);
+
+/*
+ * Class:     com_aige_cuco_toolproject_jnicallback_AccessMethod
+ * Method:    accessStaticField
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_com_aige_cuco_toolproject_jnicallback_AccessMethod_accessStaticField
+  (JNIEnv *, jclass);
+
+/*
+ * Class:     com_aige_cuco_toolproject_jnicallback_AccessMethod
+ * Method:    callSupperInstanceMethod
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_com_aige_cuco_toolproject_jnicallback_AccessMethod_callSupperInstanceMethod
+  (JNIEnv *, jclass);
+
+/*
+ * Class:     com_aige_cuco_toolproject_jnicallback_AccessMethod
+ * Method:    testJNIException
+ * Signature: (Ljava/lang/String;)V
+ */
+JNIEXPORT void JNICALL Java_com_aige_cuco_toolproject_jnicallback_AccessMethod_testJNIException
+  (JNIEnv *, jclass, jstring);
+
 #ifdef __cplusplus
 }
 #endif

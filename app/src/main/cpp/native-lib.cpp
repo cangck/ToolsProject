@@ -2,9 +2,38 @@
 #include <string>
 #include "com_aige_cuco_toolproject_JNIUtils.h"
 #include "com_aige_cuco_toolproject_jnicallback_AccessMethod.h"
+#include <android/log.h>
+// log标签
+#define  TAG    "这里填写日志的TAG"
+// 定义info信息
+#define LOGI(...) __android_log_print(ANDROID_LOG_INFO,TAG,__VA_ARGS__)
+// 定义debug信息
+#define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, TAG, __VA_ARGS__)
+// 定义error信息
+#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR,TAG,__VA_ARGS__)
 
-extern "C" JNIEXPORT jstring
 
+extern "C"
+class JNIException : jthrowable {
+
+};
+
+/**
+ * 异常抛出类
+ * @param env
+ * @param name
+ * @param msg
+ */
+void JNU_ThrowByName(JNIEnv *env, const char *name, const char *msg) {
+    jclass clazz = env->FindClass(name);
+    if (clazz == NULL) {
+        env->ThrowNew(clazz, msg);
+    }
+    env->DeleteLocalRef(clazz);
+//    env->Throw(_jthrowable);
+}
+
+JNIEXPORT jstring
 JNICALL
 Java_com_aige_cuco_toolproject_MainActivity_stringFromJNI(
         JNIEnv *env,
@@ -198,4 +227,156 @@ JNIEXPORT void JNICALL Java_com_aige_cuco_toolproject_jnicallback_AccessMethod_c
     env->DeleteLocalRef(jobj);
     env->DeleteLocalRef(str_arg);
 }
+
+
+/*
+ * Class:     com_aige_cuco_toolproject_jnicallback_AccessMethod
+ * Method:    accessInstanceField
+ * Signature: (Lcom/aige/cuco/toolproject/jnicallback/ClassMethod;)V
+ */
+JNIEXPORT void JNICALL Java_com_aige_cuco_toolproject_jnicallback_AccessMethod_accessInstanceField
+        (JNIEnv *env, jclass clazz, jobject obj) {
+    jclass jclazz = env->GetObjectClass(obj);
+    if (jclazz == NULL) {
+        return;
+    }
+    jfieldID fid = env->GetFieldID(jclazz, "str", "Ljava/lang/String;");
+    if (jclazz == NULL) {
+        return;
+    }
+    jstring j_str = (jstring) env->GetObjectField(obj, fid);
+    const char *c_str = env->GetStringUTFChars(j_str, NULL);
+    env->ReleaseStringUTFChars(j_str, c_str);
+    jstring j_newString = env->NewStringUTF("this is C String");
+    if (j_newString == NULL)
+        return;
+
+    env->SetObjectField(obj, fid, j_newString);
+    env->DeleteLocalRef(jclazz);
+    env->DeleteLocalRef(j_str);
+    env->DeleteLocalRef(j_newString);
+}
+
+/*
+ * Class:     com_aige_cuco_toolproject_jnicallback_AccessMethod
+ * Method:    accessStaticField
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_com_aige_cuco_toolproject_jnicallback_AccessMethod_accessStaticField
+        (JNIEnv *env, jclass clazz) {
+    jclass jclazz = env->FindClass("com/aige/cuco/toolproject/jnicallback/ClassMethod");
+    if (jclazz == NULL)
+        return;
+
+    jfieldID fid = env->GetStaticFieldID(jclazz, "num", "I");
+
+    if (fid == NULL)
+        return;
+
+    jint num = env->GetStaticIntField(jclazz, fid);
+
+    env->SetStaticIntField(jclazz, fid, 200);
+    env->DeleteLocalRef(jclazz);
+
+}
+
+
+/*
+ * Class:     com_aige_cuco_toolproject_jnicallback_AccessMethod
+ * Method:    callSupperInstanceMethod
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL
+Java_com_aige_cuco_toolproject_jnicallback_AccessMethod_callSupperInstanceMethod
+        (JNIEnv *env, jclass clazz) {
+    jclass jclazz = env->FindClass("com/aige/cuco/toolproject/jnicallback/Cat");
+    if (jclazz == NULL)
+        return;
+    jmethodID mid_cat_init = env->GetMethodID(jclazz, "<init>", "(Ljava/lang/String;)V");
+
+    if (mid_cat_init == NULL)
+        return;
+
+    jstring c_str_name = env->NewStringUTF("汤姆猫");
+
+    if (c_str_name == NULL)
+        return;
+    jobject obj_cat = env->NewObject(jclazz, mid_cat_init, c_str_name);
+
+    if (obj_cat == NULL)
+        return;
+
+    jclass cls_animal = env->FindClass("com/aige/cuco/toolproject/jnicallback/Animal");
+    if (cls_animal == NULL)
+        return;
+    jmethodID mid_run = env->GetMethodID(cls_animal, "run", "()V");
+    if (mid_run == NULL)
+        return;
+    env->CallNonvirtualVoidMethod(obj_cat, cls_animal, mid_run);
+
+    jmethodID mid_getName = env->GetMethodID(cls_animal, "getName", "()Ljava/lang/String;");
+    if (mid_getName == NULL)
+        return;
+    c_str_name = (jstring) env->CallNonvirtualObjectMethod(obj_cat, cls_animal, mid_getName);
+    const char *animal_c_str = env->GetStringUTFChars(c_str_name, NULL);
+
+    env->ReleaseStringUTFChars(c_str_name, animal_c_str);
+    quit:
+    env->DeleteLocalRef(jclazz);
+    env->DeleteLocalRef(cls_animal);
+    env->DeleteLocalRef(c_str_name);
+    env->DeleteLocalRef(obj_cat);
+
+    //    env->NewGlobalRef()
+    //    env->NewLocalRef()
+    //    env->NewWeakGlobalRef()
+
+
+//    env->EnsureLocalCapacity()
+//    env->PushLocalFrame()
+//    env->PopLocalFrame()
+//    env->NewLocalRef()
+//    env->IsSameObject(obj1,obj2)比较两个对象是否相等
+}
+
+
+
+/*
+ * Class:     com_aige_cuco_toolproject_jnicallback_AccessMethod
+ * Method:    testJNIException
+ * Signature: (Ljava/lang/String;)V
+ */
+JNIEXPORT void JNICALL Java_com_aige_cuco_toolproject_jnicallback_AccessMethod_testJNIException
+        (JNIEnv *env, jclass clazz, jstring str) {
+//    env->ExceptionCheck()
+//    env->ExceptionClear()
+//    env->ExceptionDescribe()
+//    env->ExceptionOccurred()
+//    env->ThrowNew(clazz,)
+
+    const jchar *cstr = env->GetStringChars(str, NULL);
+
+    if (env->ExceptionOccurred()) {
+        env->ReleaseStringChars(str, cstr);
+        JNU_ThrowByName(env, "com/aige/cuco/toolproject/jnicallback/JNIException", "字符串转换异常");
+        return;
+    }
+    env->ReleaseStringChars(str, cstr);
+
+//    env->RegisterNatives(clazz,)
+}
+
+
+/*
+ * Prototypes for functions exported by loadable shared libs.  These are
+ * called by JNI, not provided by JNI.
+ */
+JNIEXPORT jint JNI_OnLoad(JavaVM *vm, void *reserved) {
+    LOGI("加载so库");
+}
+
+JNIEXPORT void JNI_OnUnload(JavaVM *vm, void *reserved) {
+    LOGI("卸载so库");
+}
+
 

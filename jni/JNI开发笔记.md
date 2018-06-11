@@ -10,6 +10,8 @@ JNI函数查找命令规则
 开发当中常见的错误分享
 NDK开发环境搭建
 NDK编译系统详解和NDK开发综合案例
+一个是main线程，另一 个就是GC线程(负责将一些不再使用的对象回收)
+Android上的JNI局部引用表最大数量是512个
 
 java反射
 java类加载机制
@@ -151,3 +153,67 @@ c/c++在队上或栈上申请内存？
 ###C/C++访问AVA静态方法和实例方法
     当我们在运行一 个Java程序时，JVM会先将程序运行时所要用到所有相关的class文件加载到JVM中，并采用按需加载的方 式加载，也就是说某个类只有在被用到的时候才会被加载，这样设计的目的也是为了提高程序的性能和节 约内存。所以我们在用类名调用一个静态方法之前，JVM首先会判断该类是否已经加载，如果没有 被ClassLoader加载到JVM中，JVM会从classpath路径下查找该类，如果找到了，会将其加载到JVM中， 然后才是调用该类的静态方法。如果没有找到，JVM会抛出java.lang.ClassNotFoundException异常，提 示找不到这个类。ClassLoader是JVM加载class字节码文件的一种机制
     虽然函数结束后，JVM会自动释放所有局部引用变量所占的内存空间。但还是手动释放一下比较安全，因 为在JVM中维护着一个引用表，用于存储局部和全局引用变量，经测试在Android NDK环境下，这个表的 最大存储空间是512个引用，如果超过这个数就会造成引用表溢出，JVM崩溃。在PC环境下测试，不管申 请多少局部引用也不释放都不会崩，我猜可能与JVM和Android Dalvik虚拟机实现方式不一样的原因。所 以有申请就及时释放是一个好的习惯!(局部引用和全局引用在后面的文章中会详细介绍)
+    
+    void VideoPlayerController::setInitializedStatus(bool initCode) {
+        LOGI("enter VideoPlayerController::setInitializedStatus...");
+        JNIEnv *env = 0;
+        int status = 0;
+        bool needAttach = false;
+        status = g_jvm->GetEnv((void **) (&env), JNI_VERSION_1_4);
+    
+        // don't know why, if detach directly, will crash
+        if (status < 0) {
+            if (g_jvm->AttachCurrentThread(&env, NULL) != JNI_OK) {
+                LOGE("%s: AttachCurrentThread() failed", __FUNCTION__);
+                return;
+            }
+    
+            needAttach = true;
+        }
+    
+        jclass jcls = env->GetObjectClass(obj);
+    
+        jmethodID onInitializedFunc = env->GetMethodID(jcls, "onInitializedFromNative", "(Z)V");
+        env->CallVoidMethod(obj, onInitializedFunc, initCode);
+    
+        if (needAttach) {
+            if (g_jvm->DetachCurrentThread() != JNI_OK) {
+                LOGE("%s: DetachCurrentThread() failed", __FUNCTION__);
+            }
+        }
+        LOGI("leave VideoPlayerController::setInitializedStatus...");
+    }
+    
+###调用构造方法和实例方法  
+    写过C或C++的同学应该都有一个很深刻的内存管理概念，栈空间和堆空间，栈空间的内存大小受操作 系统限制，由操作系统自动来管理，
+    速度较快，所以在函数中定义的局部变量、函数形参变量都存储在栈空间。操作系统没有限制堆空间的内存大小，只受物理内存的限制，
+    内存需要程序员自己管理。在C语言中用malloc关键字动态分配的内存和在C++中用new创建的对象所分配内存都存储在堆空间，内
+    存使用完之后分别用free或delete/delete[]释放。这里不过多的讨论C/C++内存管理方面的知识，有兴 趣的同学请自行百度
+    做Java的童鞋众所周知，写Java程序是不需要手动来管理内存的，内存管理那些 烦锁的事情全都交由一个叫GC的线程来管理
+    (当一个对象没有被其它对象所引用时，该对象就会被GC 释放)。但我觉得Java内部的内存管理原理和C/C++是非常相似的，
+    上例中，Animal cat = new Cat(“汤姆”); 局部变量cat存放在栈空间上，new Cat(“汤姆”);创建的实例对象存放在堆空间，
+    返回 一个内存地址的引用，存储在cat变量中。这样就可以通过cat变量所指向的引用访问Cat实例当中所有可见的成员了
+    
+    
+    由于Java程序运行在虚拟机中的这个特点，在Java中创建的对象、定义的变量和方法，内部对象的数据
+    结构是怎么定义的，只有JVM自己知道。如果我们在C/C++中想要访问Java中对象的属性和方法时， 是不能够直接操作JVM内部
+    Java对象的数据结构的。想要在C/C++中正确的访问Java的数据结 构，JVM就必须有一套规则来约束C/C++与Java互相访问的机制，所以才有了JNI规范，
+    JNI规范定义 了一系列接口，任何实现了这套JNI接口的Java虚拟机，C/C++就可以通过调用这一系列接口来间接的 访问Java中的数据结构。比如前面文章
+    中学习到的常用JNI接口有:GetStringUTFChars(从Java虚拟 机中获取一个字符串)、ReleaseStringUTFChars(释放从JVM中获取字符串所分配的内存空间)、
+     NewStringUTF、GetArrayLength、GetFieldID、GetMethodID、FindClass等。
+     
+     
+     
+###异常处理
+    总结
+        1、当调用一个JNI函数后，必须先检查、处理、清除异常后再做其它 JNI 函数调用，否则会产生不可预知 的结果。
+        2、一旦发生异常，立即返回，让调用者处理这个异常。或 调用 ExceptionClear 清除异常，然后执行自己 的异常处理代码。
+        3、异常处理的相关JNI函数总结:
+        1> ExceptionCheck:检查是否发生了异常，若有异常返回JNI_TRUE，否则返回JNI_FALSE
+        2> ExceptionOccurred:检查是否发生了异常，若用异常返回该异常的引用，否则返回NULL 3> ExceptionDescribe:打印异常的堆栈信息
+        4> ExceptionClear:清除异常堆栈信息
+        5> ThrowNew:在当前线程触发一个异常，并自定义输出异常信息
+        jint (JNICALL *ThrowNew) (JNIEnv *env, jclass clazz, const char *msg); 6> Throw:丢弃一个现有的异常对象，在当前线程触发一个新的异常
+        jint (JNICALL *Throw) (JNIEnv *env, jthrowable obj);
+        7> FatalError:致命异常，用于输出一个异常信息，并终止当前VM实例(即退出程序)
+        void (JNICALL *FatalError) (JNIEnv *env, const char *msg);
