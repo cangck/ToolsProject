@@ -1,6 +1,33 @@
 ###JNI开发笔记
+JNI开发名称:
+JNI:java native interface
+CMake
+ndk-build::android.mk
+NDK库文件
+LLDB:native调试文件
+ABI:应用程序接口-> 32-bit ARM, AArch64, x86, and x86-64
 
+###Android架构设计:
+    Android Architecture Components Basic Sample
+    Room & RxJava Sample
+    Room Migration Sample
+    
+    https://github.com/googlesamples/android-architecture-components/tree/master/BasicSample
+    https://github.com/googlesamples/android-architecture-components/tree/master/BasicRxJavaSample
+    https://github.com/googlesamples/android-architecture-components/tree/master/PersistenceMigrationsSample
 
+###数据库的使用
+    $ adb -s emulator-5554 shell
+    $ sqlite3 /data/data/com.example.app/databases/rssitems.db
+    SQLite version 3.3.12
+    Enter ".help" for instructions
+ 
+###LLDBdebug
+    http://lldb.llvm.org/
+###添加C/C++代码到工程中
+    https://developer.android.com/studio/projects/add-native-code
+    
+    
 各平台下JNI开发流程
 JNI数据类型
 JNI函数查找命令规则
@@ -24,7 +51,18 @@ so库搜索路径？
     java.library.path:通过调用System.getProperties("java.library.path")方法获取查找的目录列表
 c/c++在队上或栈上申请内存？
 
-静态库动态库区别？
+###静态库动态库区别？
+   
+    静态库 
+            静态库即静态链接库（Windows 下的 .lib，Linux 和 Mac 下的 .a）。之所以叫做静态，是因为静态库在编译的时候会被直接拷贝一份，复制到目标程序里，这段代码在目标程序里就不会再改变了。 
+        静态库的好处很明显，编译完成之后，库文件实际上就没有作用了。目标程序没有外部依赖，直接就可以运行。当然其缺点也很明显，就是会使用目标程序的体积增大。 
+    动态库 
+            动态库即动态链接库（Windows 下的 .dll，Linux 下的 .so，Mac 下的 .dylib）。与静态库相反，动态库在编译时并不会被拷贝到目标程序中，目标程序中只会存储指向动态库的引用。等到程序运行时，动态库才会被真正加载进来。 
+        动态库的优点是，不需要拷贝到目标程序中，不会影响目标程序的体积，而且同一份库可以被多个程序使用（因为这个原因，动态库也被称作共享库）。同时，编译时才载入的特性，也可以让我们随时对库进行替换，而不需要重新编译代码。
+        动态库带来的问题主要是，动态载入会带来一部分性能损失，使用动态库也会使得程序依赖于外部环境。如果环境缺少动态库或者库的版本不正确，就会导致程序无法运行（Linux 下喜闻乐见的 lib not found 错误）。 
+
+
+
 
 加载动态库的两种方式:
     System.loadLibrary("HelloWorld"); 

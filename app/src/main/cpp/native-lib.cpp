@@ -12,7 +12,8 @@
 // 定义error信息
 #define LOGE(...) __android_log_print(ANDROID_LOG_ERROR,TAG,__VA_ARGS__)
 
-
+#include <vector>
+//using std::deque
 extern "C"
 class JNIException : jthrowable {
 
@@ -353,7 +354,7 @@ JNIEXPORT void JNICALL Java_com_aige_cuco_toolproject_jnicallback_AccessMethod_t
 //    env->ExceptionDescribe()
 //    env->ExceptionOccurred()
 //    env->ThrowNew(clazz,)
-
+//JNINativeMethod
     const jchar *cstr = env->GetStringChars(str, NULL);
 
     if (env->ExceptionOccurred()) {
@@ -364,6 +365,7 @@ JNIEXPORT void JNICALL Java_com_aige_cuco_toolproject_jnicallback_AccessMethod_t
     env->ReleaseStringChars(str, cstr);
 
 //    env->RegisterNatives(clazz,)
+
 }
 
 
