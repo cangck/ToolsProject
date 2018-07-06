@@ -2,6 +2,8 @@ package com.aige.cuco.toolproject;
 
 import org.junit.Test;
 
+import java.nio.channels.Selector;
+
 import static org.junit.Assert.*;
 
 /**
@@ -10,8 +12,19 @@ import static org.junit.Assert.*;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 public class ExampleUnitTest {
+
+
+
     @Test
     public void addition_isCorrect() {
         assertEquals(4, 2 + 2);
     }
+
+    @Test
+    public void NetWorkHandler() throws Exception {
+        Selector open = Selector.open();
+
+    }
+
+
 }

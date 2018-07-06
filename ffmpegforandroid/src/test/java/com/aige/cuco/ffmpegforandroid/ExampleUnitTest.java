@@ -2,6 +2,8 @@ package com.aige.cuco.ffmpegforandroid;
 
 import org.junit.Test;
 
+import java.io.ByteArrayOutputStream;
+
 import static org.junit.Assert.*;
 
 /**
@@ -14,4 +16,9 @@ public class ExampleUnitTest {
     public void addition_isCorrect() {
         assertEquals(4, 2 + 2);
     }
+
+
+
+
+
 }
