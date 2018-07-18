@@ -7,6 +7,14 @@ androidJNI复习
 android插件化复习
 android性能优化
 java虚拟机
+单元测试场用的库
+持续集成软件:
+Jenkins，Travis 和 Buildbot
+协作工具:
+Slack，IRC，HipChat，Jabber
+代码审查服务
+Gerrit，GitHub，GitLab，Review Board）
+
 
 android系统特性
 android常用支持库的使用
